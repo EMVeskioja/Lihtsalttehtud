@@ -8,10 +8,11 @@
 	</head>
 	<body>
 		<header
-			class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 md:px-32 py-3 border-b bg-white"
+			id="header"
+			class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 md:px-32 py-3 border-b border-black/5 bg-white/80 backdrop-blur-md transition-shadow duration-300"
 		>
 			<a href="/" class="flex items-center gap-2 text-lg font-semibold">
-				<img src="logo-icon.svg" alt="Lihtsalt Tehtud" class="w-6 h-6" />
+				<img src="assets/logo-icon.svg" alt="Lihtsalt Tehtud" class="w-6 h-6" />
 				Lihtsalt Tehtud
 			</a>
 
@@ -28,7 +29,9 @@
 				<a href="/ettevote" class="text-sm hover:text-black transition-colors"
 					>Ettevõte</a
 				>
-				<a href="" class="text-sm hover:text-black transition-colors"
+				<a
+					href="#kontakt"
+					class="text-sm font-semibold text-black bg-[#D6F2E8] hover:bg-[#c3e8d9] px-3.5 py-1 rounded-full transition-colors"
 					>Kontakt</a
 				>
 			</nav>
@@ -74,27 +77,37 @@
 			<a href="/mtu" class="text-2xl font-semibold text-black">MTÜ</a>
 			<a href="/kov" class="text-2xl font-semibold text-black">KOV</a>
 			<a href="/ettevote" class="text-2xl font-semibold text-black">Ettevõte</a>
-			<a href="" class="text-2xl font-semibold text-black">Kontakt</a>
+			<a href="/kontakt" class="text-2xl font-semibold text-black">Kontakt</a>
 		</div>
 
 		<section></section>
 
 		<footer></footer>
+
+		<script>
+			const toggle = document.getElementById("menu-toggle");
+			const menu = document.getElementById("mobile-menu");
+			const menuIcon = document.getElementById("menu-icon");
+			const closeIcon = document.getElementById("close-icon");
+			let open = false;
+
+			toggle.addEventListener("click", () => {
+				open = !open;
+				menu.classList.toggle("translate-x-full", !open);
+				menu.classList.toggle("translate-x-0", open);
+				menuIcon.classList.toggle("hidden", open);
+				closeIcon.classList.toggle("hidden", !open);
+				document.body.style.overflow = open ? "hidden" : "";
+			});
+
+			menu
+				.querySelectorAll("a")
+				.forEach((a) => a.addEventListener("click", () => toggle.click()));
+
+			window.addEventListener("scroll", () => {
+				const h = document.getElementById("header");
+				h.classList.toggle("shadow-sm", window.scrollY > 4);
+			});
+		</script>
 	</body>
-
-	<script>
-		const toggle = document.getElementById("menu-toggle");
-		const menu = document.getElementById("mobile-menu");
-		const menuIcon = document.getElementById("menu-icon");
-		const closeIcon = document.getElementById("close-icon");
-		let open = false;
-
-		toggle.addEventListener("click", () => {
-			open = !open;
-			menu.classList.toggle("translate-x-full", !open);
-			menu.classList.toggle("translate-x-0", open);
-			menuIcon.classList.toggle("hidden", open);
-			closeIcon.classList.toggle("hidden", !open);
-		});
-	</script>
 </html>
