@@ -5,8 +5,26 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Lihtsalt Tehtud</title>
 		<script src="https://cdn.tailwindcss.com"></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+			rel="stylesheet"
+		/>
+		<script>
+			tailwind.config = {
+				theme: {
+					extend: {
+						fontFamily: {
+							heading: ['"Plus Jakarta Sans"', "sans-serif"],
+							body: ["Inter", "sans-serif"],
+						},
+					},
+				},
+			};
+		</script>
 	</head>
-	<body class="bg-[#FBFAF6] text-[#1C1B17]">
+	<body class="bg-[#FBFAF6] text-[#1C1B17] font-body">
 		<header
 			id="header"
 			class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 md:px-32 py-3 border-b border-[#1C1B17]/5 bg-[#FBFAF6]/80 backdrop-blur-md transition-shadow duration-300"
@@ -83,7 +101,7 @@
 		<section
 			class="min-h-screen flex flex-col items-center justify-center text-center gap-3"
 		>
-			<h1 class="text-5xl font-bold">
+			<h1 class="text-5xl font-bold font-heading">
 				Digitaalsed tööriistad päris töö tegijatele
 			</h1>
 			<p class="text-lg text-[#1C1B17]/60 max-w-xl">
@@ -95,7 +113,9 @@
 		<section class="py-28">
 			<div class="max-w-4xl mx-auto grid grid-cols-1 gap-4">
 				<div class="rounded-2xl border border-[#1C1B17]/10 p-10">
-					<h3 class="text-xl font-bold mb-6">Kuidas see päriselt praegu on?</h3>
+					<h3 class="text-xl font-bold mb-6 font-heading">
+						Kuidas see päriselt praegu on?
+					</h3>
 					<ul class="space-y-4 text-sm">
 						<li class="flex gap-3 items-start">
 							<span class="mt-1.5 w-2 h-2 rounded-full bg-red-400"></span>
@@ -120,7 +140,9 @@
 				</div>
 
 				<div class="rounded-2xl border border-[#1C1B17]/10 p-10">
-					<h3 class="text-xl font-bold mb-6">Kuidas see võiks olla?</h3>
+					<h3 class="text-xl font-bold mb-6 font-heading">
+						Kuidas see võiks olla?
+					</h3>
 					<ul class="space-y-4 text-sm mb-6">
 						<li class="flex gap-3 items-start">
 							<span class="mt-1.5 w-2 h-2 rounded-full bg-[#7FD8B8]"></span>
@@ -152,7 +174,7 @@
 
 		<section class="py-28">
 			<div class="max-w-5xl mx-auto">
-				<h2 class="text-3xl font-bold text-center mb-2">
+				<h2 class="text-3xl font-bold text-center mb-2 font-heading">
 					Kellele me lahendusi loome?
 				</h2>
 				<p class="text-[#1C1B17]/60 text-center mb-12">
@@ -164,7 +186,7 @@
 						href="mtu/"
 						class="group rounded-2xl border border-[#1C1B17]/10 p-6 flex flex-col"
 					>
-						<h3 class="font-semibold mb-1">MTÜ</h3>
+						<h3 class="font-semibold mb-1 font-heading">MTÜ</h3>
 						<p class="text-xs text-[#1C1B17]/60 mb-3">Digitööriistad MTÜdele</p>
 						<p class="text-sm mb-3">
 							<span class="font-semibold">Tasuta</span>
@@ -183,7 +205,7 @@
 						href="ettevote/"
 						class="group rounded-2xl border border-[#1C1B17]/10 p-6 flex flex-col"
 					>
-						<h3 class="font-semibold mb-1">Ettevõtted</h3>
+						<h3 class="font-semibold mb-1 font-heading">Ettevõtted</h3>
 						<p class="text-xs text-[#1C1B17]/60 mb-3">
 							Lahendused väikestele ettevõtetele
 						</p>
@@ -206,7 +228,7 @@
 						href="kov/"
 						class="group rounded-2xl border border-[#1C1B17]/10 p-6 flex flex-col"
 					>
-						<h3 class="font-semibold mb-1">KOV</h3>
+						<h3 class="font-semibold mb-1 font-heading">KOV</h3>
 						<p class="text-xs text-[#1C1B17]/60 mb-3">
 							Partnerlahendus omavalitsustele
 						</p>
@@ -226,7 +248,9 @@
 
 		<section id="kontakt" class="py-28">
 			<div class="max-w-lg mx-auto">
-				<h2 class="text-3xl font-bold text-center mb-2">Võta ühendust</h2>
+				<h2 class="text-3xl font-bold text-center mb-2 font-heading">
+					Võta ühendust
+				</h2>
 				<p class="text-[#1C1B17]/60 text-center mb-10">
 					Kirjuta meile ja vaatame koos üle, kas Lihtsalt Tehtud võiks teie
 					organisatsiooni aidata
