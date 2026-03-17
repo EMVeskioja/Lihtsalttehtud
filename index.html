@@ -88,6 +88,80 @@
 			</p>
 		</section>
 
+		<section id="kontakt" class="py-28">
+			<div class="max-w-lg mx-auto">
+				<h2 class="text-3xl font-bold text-center mb-2">Võta ühendust</h2>
+				<p class="text-black/60 text-center mb-10">
+					Kirjuta meile ja vastame esimesel võimalusel
+				</p>
+
+				<form class="flex flex-col gap-4">
+					<div class="grid grid-cols-2 gap-4">
+						<div>
+							<label for="name" class="block text-sm font-medium mb-1.5"
+								>Nimi</label
+							>
+							<input
+								type="text"
+								id="name"
+								name="name"
+								required
+								class="w-full px-3 py-2 rounded-lg border border-black/10 text-sm outline-none placeholder:text-black/30"
+								placeholder="Sinu nimi"
+							/>
+						</div>
+						<div>
+							<label for="email" class="block text-sm font-medium mb-1.5"
+								>E-post</label
+							>
+							<input
+								type="email"
+								id="email"
+								name="email"
+								required
+								class="w-full px-3 py-2 rounded-lg border border-black/10 text-sm outline-none placeholder:text-black/30"
+								placeholder="nimi@näide.ee"
+							/>
+						</div>
+					</div>
+
+					<div>
+						<label for="organisation" class="block text-sm font-medium mb-1.5"
+							>Organisatsioon</label
+						>
+						<input
+							type="text"
+							id="organisation"
+							name="organisation"
+							class="w-full px-3 py-2 rounded-lg border border-black/10 text-sm outline-none placeholder:text-black/30"
+							placeholder="Organisatsiooni nimi"
+						/>
+					</div>
+
+					<div>
+						<label for="message" class="block text-sm font-medium mb-1.5"
+							>Sõnum</label
+						>
+						<textarea
+							id="message"
+							name="message"
+							rows="4"
+							required
+							class="w-full px-3 py-2 rounded-lg border border-black/10 text-sm outline-none placeholder:text-black/30 resize-none"
+							placeholder="Kuidas saame aidata?"
+						></textarea>
+					</div>
+
+					<button
+						type="submit"
+						class="mt-2 w-full bg-[#141E19] text-white text-sm font-medium py-2 rounded-lg hover:bg-[#141E19]/90 transition-colors"
+					>
+						Saada sõnum
+					</button>
+				</form>
+			</div>
+		</section>
+
 		<footer class="border-t py-12">
 			<div
 				class="max-w-xl mx-auto flex flex-col items-center text-center gap-6"
