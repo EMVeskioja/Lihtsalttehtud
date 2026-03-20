@@ -23,6 +23,11 @@
 				},
 			};
 		</script>
+		<style>
+			html {
+				scroll-behavior: smooth;
+			}
+		</style>
 	</head>
 	<body class="bg-[#FBFAF6] text-[#1C1B17] font-body">
 		<header
@@ -39,7 +44,7 @@
 			</a>
 
 			<nav
-				class="hidden md:flex items-center gap-6 text-[#1C1B17]/50 font-semibold text-sm"
+				class="hidden md:flex items-center gap-6 text-[#1C1B17]/50 font-medium text-sm"
 			>
 				<a href="/mtu/" class="hover:text-[#1C1B17] transition-colors">MTÜ</a>
 				<a href="/kov/" class="hover:text-[#1C1B17] transition-colors">KOV</a>
@@ -100,23 +105,30 @@
 			>
 		</div>
 
-		<section class="py-32">
-			<div class="max-w-3xl mx-auto text-center">
-				<h1 class="text-4xl font-bold mb-4 font-heading">
+		<section class="pt-32 pb-20 md:pt-44 md:pb-32 px-6">
+			<div class="max-w-2xl mx-auto text-center">
+				<p class="text-xs uppercase text-[#1C1B17]/30 mb-4">
+					Esimene kuu tasuta
+				</p>
+				<h1 class="text-4xl md:text-5xl font-extrabold mb-5 font-heading">
 					Tööriistad väikese ettevõtte igapäevaks
 				</h1>
-				<p class="text-lg text-[#1C1B17]/60 max-w-xl mx-auto">
-					Starter – 29 € / kuus · Pro – 59 € / kuus
-					<br />
-					Esimene kuu tasuta
-					<br />
+				<p class="text-[#1C1B17]/50 text-lg max-w-lg mx-auto mb-2">
 					Sobib teenusepakkujatele, väikestele meeskondadele ja ettevõtjatele,
 					kes tahavad oma töö lihtsamini hallata
 				</p>
+				<p class="text-sm text-[#1C1B17]/30 mb-8">
+					Starter &ndash; 29 &euro; / kuus &middot; Pro &ndash; 59 &euro; / kuus
+				</p>
+				<a
+					href="/#kontakt"
+					class="bg-[#242F1F] text-white text-sm font-medium px-5 py-2.5 rounded-lg hover:bg-[#242F1F]/90 transition-colors"
+					>Võta ühendust</a
+				>
 			</div>
 		</section>
 
-		<footer class="border-t py-12">
+		<footer class="border-t border-[#1C1B17]/5 py-12 px-6">
 			<div
 				class="max-w-xl mx-auto flex flex-col items-center text-center gap-6"
 			>
@@ -129,7 +141,7 @@
 					Lihtsalt Tehtud
 				</a>
 
-				<p class="text-sm text-[#1C1B17]/60 max-w-xs">
+				<p class="text-sm text-[#1C1B17]/50 max-w-xs">
 					Struktuur, mis hoiab tegijate aega ja väärtust
 				</p>
 
@@ -139,10 +151,10 @@
 						target="_blank"
 						rel="noopener noreferrer"
 						aria-label="Facebook"
-						class="group w-9 h-9 rounded-full bg-[#1C1B17]/10 flex items-center justify-center transition-colors hover:bg-[#7FD8B8]"
+						class="group w-9 h-9 rounded-full bg-[#1C1B17]/5 flex items-center justify-center transition-colors hover:bg-[#7FD8B8]"
 					>
 						<svg
-							class="w-4 h-4 text-[#1C1B17]/60 transition-colors group-hover:text-[#242F1F]"
+							class="w-4 h-4 text-[#1C1B17]/40 transition-colors group-hover:text-[#242F1F]"
 							fill="currentColor"
 							viewBox="0 0 24 24"
 						>
@@ -156,10 +168,10 @@
 						target="_blank"
 						rel="noopener noreferrer"
 						aria-label="LinkedIn"
-						class="group w-9 h-9 rounded-full bg-[#1C1B17]/10 flex items-center justify-center transition-colors hover:bg-[#7FD8B8]"
+						class="group w-9 h-9 rounded-full bg-[#1C1B17]/5 flex items-center justify-center transition-colors hover:bg-[#7FD8B8]"
 					>
 						<svg
-							class="w-4 h-4 text-[#1C1B17]/60 transition-colors group-hover:text-[#242F1F]"
+							class="w-4 h-4 text-[#1C1B17]/40 transition-colors group-hover:text-[#242F1F]"
 							fill="currentColor"
 							viewBox="0 0 24 24"
 						>
@@ -172,7 +184,7 @@
 			</div>
 
 			<div class="mt-6 text-center">
-				<p class="text-xs text-[#1C1B17]/60">&copy; 2026 Lihtsalt Tehtud</p>
+				<p class="text-xs text-[#1C1B17]/30">&copy; 2026 Lihtsalt Tehtud</p>
 			</div>
 		</footer>
 
