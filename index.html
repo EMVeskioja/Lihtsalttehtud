@@ -3,6 +3,17 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="Lihtsalt Tehtud aitab väikestel organisatsioonidel, ettevõtetel ja omavalitsustel hoida oma töö struktureerituna ja nähtavana"
+		/>
+		<meta property="og:title" content="Lihtsalt Tehtud" />
+		<meta
+			property="og:description"
+			content="Digitaalsed tööriistad päris töö tegijatele"
+		/>
+		<meta property="og:type" content="website" />
+		<link rel="icon" type="image/svg+xml" href="assets/logo-icon.svg" />
 		<title>Lihtsalt Tehtud</title>
 		<script src="https://cdn.tailwindcss.com"></script>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -26,6 +37,66 @@
 		<style>
 			html {
 				scroll-behavior: smooth;
+			}
+
+			@keyframes fadeInUp {
+				from {
+					opacity: 0;
+					transform: translateY(24px);
+				}
+				to {
+					opacity: 1;
+					transform: translateY(0);
+				}
+			}
+
+			.hero-1 {
+				opacity: 0;
+				animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards;
+			}
+			.hero-2 {
+				opacity: 0;
+				animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
+			}
+			.hero-3 {
+				opacity: 0;
+				animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
+			}
+			.hero-4 {
+				opacity: 0;
+				animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.4s forwards;
+			}
+			.hero-5 {
+				opacity: 0;
+				animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.5s forwards;
+			}
+
+			.reveal {
+				opacity: 0;
+				transform: translateY(20px);
+				transition:
+					opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+					transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+			}
+			.reveal.visible {
+				opacity: 1;
+				transform: translateY(0);
+			}
+
+			@media (prefers-reduced-motion: reduce) {
+				.hero-1,
+				.hero-2,
+				.hero-3,
+				.hero-4,
+				.hero-5 {
+					animation: none;
+					opacity: 1;
+				}
+				.reveal {
+					transition: none;
+					opacity: 1;
+					transform: none;
+				}
 			}
 		</style>
 	</head>
@@ -102,25 +173,27 @@
 		</div>
 
 		<section
-			class="pt-40 pb-24 md:pt-48 md:pb-32 flex flex-col items-center text-center px-6"
+			class="relative pt-40 md:pt-48 flex flex-col items-center text-center px-6 overflow-hidden"
 		>
-			<h1 class="text-4xl md:text-6xl font-extrabold font-heading max-w-2xl">
+			<h1
+				class="hero-1 text-4xl md:text-6xl font-extrabold font-heading max-w-2xl"
+			>
 				Digitaalsed tööriistad päris töö tegijatele
 			</h1>
-			<p class="mt-5 text-[#1C1B17]/50 text-lg max-w-xl">
+			<p class="hero-2 mt-5 text-[#1C1B17]/50 text-lg max-w-xl">
 				Lihtsalt Tehtud aitab väikestel organisatsioonidel, ettevõtetel ja
 				omavalitsustel hoida oma töö struktureerituna ja nähtavana
 			</p>
 			<a
 				href="#kontakt"
-				class="mt-8 bg-[#242F1F] text-white text-sm font-medium px-5 py-2.5 rounded-xl hover:bg-[#242F1F]/90 transition-colors"
+				class="hero-3 inline-block mt-8 bg-[#7FD8B8] text-[#1C1B17] text-sm font-medium px-5 py-2.5 rounded-xl hover:bg-[#6BC4A4] transition-all active:scale-[0.98]"
 				>Alusta vestlust</a
 			>
 		</section>
 
 		<section class="py-20 md:py-32 px-6">
 			<div class="max-w-3xl mx-auto grid grid-cols-1 gap-4">
-				<div class="rounded-2xl border border-[#1C1B17]/10 p-8 md:p-10">
+				<div class="reveal rounded-2xl border border-[#1C1B17]/10 p-8 md:p-10">
 					<h3 class="text-lg font-bold font-heading mb-5">
 						Kuidas see päriselt praegu on?
 					</h3>
@@ -156,7 +229,7 @@
 				</div>
 
 				<div
-					class="rounded-2xl border border-[#7FD8B8]/30 bg-[#D6F2E8]/10 p-8 md:p-10"
+					class="reveal rounded-2xl border border-[#7FD8B8]/30 bg-[#D6F2E8]/10 p-8 md:p-10"
 				>
 					<h3 class="text-lg font-bold font-heading mb-5">
 						Kuidas see võiks olla?
@@ -190,7 +263,7 @@
 					</ul>
 					<a
 						href="#kontakt"
-						class="bg-[#7FD8B8] hover:bg-[#6BC4A4] text-sm font-medium px-4 py-2 rounded-xl transition-colors"
+						class="inline-block bg-[#7FD8B8] hover:bg-[#6BC4A4] text-sm font-medium px-4 py-2 rounded-xl transition-all active:scale-[0.98]"
 						>Kirjelda olukorda</a
 					>
 				</div>
@@ -198,7 +271,7 @@
 		</section>
 
 		<section class="py-20 md:py-32 px-6">
-			<div class="max-w-4xl mx-auto">
+			<div class="reveal max-w-4xl mx-auto">
 				<h2
 					class="text-2xl md:text-3xl font-bold text-center mb-2 font-heading"
 				>
@@ -264,7 +337,7 @@
 		</section>
 
 		<section id="kontakt" class="py-20 md:py-32 px-6">
-			<div class="max-w-lg mx-auto">
+			<div class="reveal max-w-lg mx-auto">
 				<h2
 					class="text-2xl md:text-3xl font-bold text-center font-heading mb-3"
 				>
@@ -286,7 +359,7 @@
 								id="name"
 								name="name"
 								required
-								class="w-full px-3.5 py-2.5 rounded-lg border border-[#1C1B17]/10 bg-white text-sm outline-none placeholder:text-[#1C1B17]/25 focus:border-[#1C1B17]/30 transition-colors"
+								class="w-full px-3.5 py-2.5 rounded-lg border border-[#1C1B17]/10 bg-white text-sm outline-none placeholder:text-[#1C1B17]/25 focus:border-[#7FD8B8] focus:ring-2 focus:ring-[#7FD8B8]/20 transition-colors"
 								placeholder="Sinu nimi"
 							/>
 						</div>
@@ -299,7 +372,7 @@
 								id="email"
 								name="email"
 								required
-								class="w-full px-3.5 py-2.5 rounded-lg border border-[#1C1B17]/10 bg-white text-sm outline-none placeholder:text-[#1C1B17]/25 focus:border-[#1C1B17]/30 transition-colors"
+								class="w-full px-3.5 py-2.5 rounded-lg border border-[#1C1B17]/10 bg-white text-sm outline-none placeholder:text-[#1C1B17]/25 focus:border-[#7FD8B8] focus:ring-2 focus:ring-[#7FD8B8]/20 transition-colors"
 								placeholder="nimi@näide.ee"
 							/>
 						</div>
@@ -313,7 +386,7 @@
 							type="text"
 							id="organisation"
 							name="organisation"
-							class="w-full px-3.5 py-2.5 rounded-lg border border-[#1C1B17]/10 bg-white text-sm outline-none placeholder:text-[#1C1B17]/25 focus:border-[#1C1B17]/30 transition-colors"
+							class="w-full px-3.5 py-2.5 rounded-lg border border-[#1C1B17]/10 bg-white text-sm outline-none placeholder:text-[#1C1B17]/25 focus:border-[#7FD8B8] focus:ring-2 focus:ring-[#7FD8B8]/20 transition-colors"
 							placeholder="Organisatsiooni nimi"
 						/>
 					</div>
@@ -327,14 +400,14 @@
 							name="message"
 							rows="4"
 							required
-							class="w-full px-3.5 py-2.5 rounded-lg border border-[#1C1B17]/10 bg-white text-sm outline-none placeholder:text-[#1C1B17]/25 resize-none focus:border-[#1C1B17]/30 transition-colors"
+							class="w-full px-3.5 py-2.5 rounded-lg border border-[#1C1B17]/10 bg-white text-sm outline-none placeholder:text-[#1C1B17]/25 resize-none focus:border-[#7FD8B8] focus:ring-2 focus:ring-[#7FD8B8]/20 transition-colors"
 							placeholder="Kuidas saame aidata?"
 						></textarea>
 					</div>
 
 					<button
 						type="submit"
-						class="w-full bg-[#242F1F] text-white text-sm font-medium py-2.5 rounded-xl hover:bg-[#242F1F]/90 transition-colors"
+						class="w-full bg-[#7FD8B8] text-[#1C1B17] text-sm font-medium py-2.5 rounded-xl hover:bg-[#6BC4A4] transition-all active:scale-[0.98]"
 					>
 						Saada sõnum
 					</button>
@@ -426,6 +499,21 @@
 				const h = document.getElementById("header");
 				h.classList.toggle("shadow-sm", window.scrollY > 4);
 			});
+
+			const observer = new IntersectionObserver(
+				(entries) => {
+					entries.forEach((entry) => {
+						if (entry.isIntersecting) {
+							entry.target.classList.add("visible");
+							observer.unobserve(entry.target);
+						}
+					});
+				},
+				{ threshold: 0.1 },
+			);
+			document
+				.querySelectorAll(".reveal")
+				.forEach((el) => observer.observe(el));
 		</script>
 	</body>
 </html>

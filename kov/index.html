@@ -3,6 +3,11 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="Ühine süsteem aitab hoida info nähtavana, vähendada aruandluskoormust ja lihtsustada koostööd."
+		/>
+		<link rel="icon" type="image/svg+xml" href="../assets/logo-icon.svg" />
 		<title>KOV - Lihtsalt Tehtud</title>
 		<script src="https://cdn.tailwindcss.com"></script>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -26,6 +31,44 @@
 		<style>
 			html {
 				scroll-behavior: smooth;
+			}
+
+			@keyframes fadeInUp {
+				from {
+					opacity: 0;
+					transform: translateY(24px);
+				}
+				to {
+					opacity: 1;
+					transform: translateY(0);
+				}
+			}
+
+			.hero-1 {
+				opacity: 0;
+				animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards;
+			}
+			.hero-2 {
+				opacity: 0;
+				animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
+			}
+			.hero-3 {
+				opacity: 0;
+				animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
+			}
+			.hero-4 {
+				opacity: 0;
+				animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.4s forwards;
+			}
+
+			@media (prefers-reduced-motion: reduce) {
+				.hero-1,
+				.hero-2,
+				.hero-3,
+				.hero-4 {
+					animation: none;
+					opacity: 1;
+				}
 			}
 		</style>
 	</head>
@@ -105,20 +148,26 @@
 			>
 		</div>
 
-		<section class="pt-32 pb-20 md:pt-44 md:pb-32 px-6">
+		<section
+			class="relative pt-32 pb-20 md:pt-44 md:pb-32 px-6 overflow-hidden"
+		>
 			<div class="max-w-3xl mx-auto text-center">
-				<p class="text-xs uppercase text-[#1C1B17]/30 mb-4">Hinnapäringuga</p>
-				<h1 class="text-4xl md:text-5xl font-extrabold mb-5 leading-[1.1]">
+				<p class="hero-1 text-xs uppercase text-[#1C1B17]/30 mb-4">
+					Hinnapäringuga
+				</p>
+				<h1
+					class="hero-2 text-4xl md:text-5xl font-extrabold mb-5 leading-[1.1]"
+				>
 					Tööriist partnerite ja projektide koordineerimiseks
 				</h1>
-				<p class="text-[#1C1B17]/50 text-lg max-w-lg mx-auto mb-8">
+				<p class="hero-3 text-[#1C1B17]/50 text-lg max-w-lg mx-auto mb-8">
 					Omavalitsused teevad koostööd paljude partneritega. Ühine süsteem
 					aitab hoida info nähtavana, vähendada aruandluskoormust ja lihtsustada
 					koostööd.
 				</p>
 				<a
 					href="/#kontakt"
-					class="bg-[#242F1F] text-white text-sm font-medium px-5 py-2.5 rounded-lg hover:bg-[#242F1F]/90 transition-colors"
+					class="hero-4 inline-block bg-[#7FD8B8] text-[#1C1B17] text-sm font-medium px-5 py-2.5 rounded-lg hover:bg-[#6BC4A4] transition-all active:scale-[0.98]"
 					>Võta ühendust</a
 				>
 			</div>
